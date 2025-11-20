@@ -1,0 +1,45 @@
+object HexEditor: THexEditor
+  Left = 928
+  Height = 846
+  Top = 950
+  Width = 1496
+  Caption = 'HexEditor'
+  ClientHeight = 846
+  ClientWidth = 1496
+  DesignTimePPI = 192
+  Position = poScreenCenter
+  LCLVersion = '4.2.0.0'
+  OnClose = FormClose
+  object KHexEditor1: TKHexEditor
+    Left = 0
+    Height = 802
+    Top = 0
+    Width = 1496
+    Align = alClient
+    Font.Height = -42
+    Font.Name = 'Courier New'
+    Font.Pitch = fpFixed
+    Font.Style = [fsBold]
+    TabOrder = 0
+    OnChange = KHexEditor1Change
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 44
+    Top = 802
+    Width = 1496
+    Panels = <    
+      item
+        Text = 'Size:'
+        Width = 300
+      end    
+      item
+        Text = 'Original data'
+        Width = 180
+      end    
+      item
+        Width = 100
+      end>
+    SimplePanel = False
+  end
+end
